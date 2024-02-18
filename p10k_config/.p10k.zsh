@@ -1,1 +1,0 @@
-/Users/mhf/.p10k.zsh

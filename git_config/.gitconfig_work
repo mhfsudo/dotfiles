@@ -1,1 +1,6 @@
-/Users/mhf/.gitconfig_work
+[user]
+    email = michael.friderich@bedag.ch
+    signingkey = CDC3BB30968534DF
+
+[commit]
+    gpsign = true
