@@ -1,0 +1,29 @@
+[user]
+	name = Michael Friderich
+	email = michael@frideri.ch
+
+[core]
+	editor = nvim
+
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = auto 
+
+[includeIf "gitdir:~/Git/Work/Bedag/ansible_project_lb_rp/"]
+	path = ~/.gitconfig_work
+
+[includeIf "gitdir:~/Git/Work/Bedag/gpg/"]	
+	path = ~/.gitconfig_work
+
+[includeIf "gitdir:~/Git/Work/Bedag/linux_proxy_config/"]
+	path = ~/.gitconfig_work
+
+[includeIf "gitdir:~/Git/Work/Bedag/mac-at-bedag-main/"]	
+	path = ~/.gitconfig_work
+
+[includeIf "gitdir:~/Git/Work/Bedag/sre-common/"]	
+	path = ~/.gitconfig_work
+
