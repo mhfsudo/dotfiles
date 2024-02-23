@@ -98,6 +98,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+PATH=$PATH:/usr/sbin:/sbin
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
