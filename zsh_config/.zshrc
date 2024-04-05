@@ -98,6 +98,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+PATH=$PATH:/usr/sbin:/sbin
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -129,12 +130,17 @@ alias p10kconfig="nvim ~/.p10k.zsh"
 alias warptheme="nvim ~/.warp/themes/warp.yaml"
 alias zshconfig="nvim ~/.zshrc"
 
-# ALias scripts 
+# Alias scripts
 alias update="zsh ~/Git/Personal/Mac/mac/script/update.sh"
 alias restart="zsh ~/Git/Personal/Mac/mac/script/reboot.sh"
 alias shutdown="zsh ~/Git/Personal/Mac/mac/script/poweroff.sh"
 
-# Shortcuts
+# Alias directories
+alias family="cd ~/Documents/Family"
+alias personal="cd ~/Documents/Personal"
+alias work="cd ~/Documents/Work"
+
+# Alias Shortcuts
 alias nv="nvim"
 alias l="colorls"
 alias ls="ls -lah"
