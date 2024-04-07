@@ -1,10 +1,17 @@
 # dotfiles
 
 ## Description
-*Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.*
+This Repo contains some of my configurations.
+
+## Installation
+- Git: https://git-scm.com/
+- Warp: https://www.warp.dev/
+- ZSH: https://zsh.sourceforge.io/
+- ZSH Theme Powerlevel 10K: https://github.com/romkatv/powerlevel10k
+- OhMyZSH: https://ohmyz.sh/
 
 ## Contributing
-Every feedback is appreciated.
+Every feedback and support is appreciated.
 
 ## Authors and acknowledgment
 **Michael Friderich**<br>
@@ -20,4 +27,3 @@ GNU GENERAL PUBLIC LICENSE, Version 3, 29 June 2007
 
 ## Project status
 This project is maintained by me.
-

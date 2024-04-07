@@ -131,9 +131,9 @@ alias warptheme="nvim ~/.warp/themes/warp.yaml"
 alias zshconfig="nvim ~/.zshrc"
 
 # Alias scripts
-alias update="zsh ~/Git/Personal/Mac/mac/script/update.sh"
-alias restart="zsh ~/Git/Personal/Mac/mac/script/reboot.sh"
-alias shutdown="zsh ~/Git/Personal/Mac/mac/script/poweroff.sh"
+alias update="zsh ~/Git/Personal/mac/script/update.sh"
+alias restart="zsh ~/Git/Personal/mac/script/reboot.sh"
+alias shutdown="zsh ~/Git/Personal/mac/script/poweroff.sh"
 
 # Alias directories
 alias family="cd ~/Documents/Family"
