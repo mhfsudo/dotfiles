@@ -1,0 +1,15 @@
+# Example file for the ~/.ssh/config when using 2 ssh keys
+
+Host GitHub
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519_personal
+    IdentifiesOnly yes
+    AddKeysToAgent yes
+
+Host GitLab
+    HostName gitlab.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519_work
+    IdentifiesOnly yes
+    AddKeysToAgent yes
