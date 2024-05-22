@@ -1,0 +1,31 @@
+import = [
+  ""
+]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 15
+padding.y = 15
+
+decorations = "Buttonless"
+
+opacity = 0.85
+blur = true
+
+[font]
+normal.family = "JetBrainsMono Nerd Font Mono"
+size = 14
+
+[colors.primary]
+foreground = "#531CE5"
+background = "#000000"
+dim_foreground = "#531CE5"
+
+[colors]
+cursor = { text = "#FFFFFF", cursor = "#F81CE5" }
+
+[cursor.style]
+shape = "Block"
+blinking = "On"
