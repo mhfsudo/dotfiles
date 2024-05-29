@@ -1,8 +1,8 @@
 #!/bin/bash
 
 sketchybar --add item cpu right \
-           --set cpu  label.color=$ITEM_BG_COLOR \
+           --set cpu  label.color=$BLACK \
+                      icon.color=$BLACK \
+                      icon=􀧓 \
                       update_freq=2 \
-                      icon=􀧓  \
-                      script="$PLUGIN_DIR/cpu.sh" \
-                      icon.color=$ITEM_BG_COLOR
+                      script="$PLUGIN_DIR/cpu.sh"

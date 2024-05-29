@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sketchybar --add item volume right \
-           --set volume label.color=$ITEM_BG_COLOR \
+           --set volume label.color=$BLACK \
                         script="$PLUGIN_DIR/volume.sh" \
-                        icon.color=$ITEM_BG_COLOR \
+                        icon.color=$BLACK \
            --subscribe volume volume_change \

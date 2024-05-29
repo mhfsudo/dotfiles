@@ -8,11 +8,15 @@ source "$CONFIG_DIR/colors.sh" # Loads all defined colors
 
 if [ $SELECTED = true ]; then
   sketchybar --set $NAME background.drawing=on \
-                         background.color=$BAR_COLOR \
-                         label.color=$ITEM_BG_COLOR \
-                         icon.color=$ITEM_BG_COLOR
+                         background.color=NULL \
+                         background.border_color=$PURPLE \
+                         background.border_width=2 \
+                         label.color=$BLACK \
+                         icon.color=$BLACK
 else
   sketchybar --set $NAME background.drawing=off \
-                         label.color=$ITEM_BG_COLOR \
-                         icon.color=$ITEM_BG_COLOR
+                         background.color=NULL \
+                         background.border_color=NULL
+                         label.color=$BLACK \
+                         icon.color=$BLACL
 fi
