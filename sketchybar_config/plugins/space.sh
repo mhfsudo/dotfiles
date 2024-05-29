@@ -9,7 +9,7 @@ source "$CONFIG_DIR/colors.sh" # Loads all defined colors
 if [ $SELECTED = true ]; then
   sketchybar --set $NAME background.drawing=on \
                          background.color=NULL \
-                         background.border_color=$PURPLE \
+                         background.border_color=$PINK \
                          background.border_width=2 \
                          label.color=$BLACK \
                          icon.color=$BLACK
