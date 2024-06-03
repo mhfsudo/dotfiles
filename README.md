@@ -31,6 +31,9 @@ Every feedback and support is appreciated.
 [mail]: mailto:gitlab@frideri.ch
 [linkedin]: https://www.linkedin.com/in/michael-friderich-b699a4140/?locale=en_US
 
+<img width="1100" alt="image" src="https://github.com/mhfsudo/michaelfriderich/assets/48755847/92cea3d9-e130-46e5-8496-b22f4cc7046e">
+Brewfiles: https://www.brewfiles.com/brew/NqorbBdBbPhLJwbZg2gD/)
+
 ## License
 
 GNU GENERAL PUBLIC LICENSE, Version 3, 29 June 2007
