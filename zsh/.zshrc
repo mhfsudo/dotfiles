@@ -20,7 +20,7 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell" 
+# ZSH_THEME="robbyrussell"
 ZSH_THEME="bira"
 
 # Set list of themes to pick from when loading at random
@@ -84,16 +84,16 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  argocd 
-  colorize 
+  argocd
+  colorize
   docker
-  fzf 
-  git 
-  helm 
-  kubectl 
-  kubectx 
-  macos 
-  pre-commit 
+  fzf
+  git
+  helm
+  kubectl
+  kubectx
+  macos
+  pre-commit
   terraform
 )
 
