@@ -9,9 +9,9 @@ sketchybar --add item media right \
                        icon.padding_left=10 \
                        scroll_texts=on \
                        icon= \
-                       icon.color=$GREEN \
+                       icon.color=$BLACK \
                        background.drawing=on \
-                       background.color=NULL \
+                       background.color=$GREEN \
                        background.border_color=$GREEN \
                        background.border_width=2 \
                        blur_radius=20 \

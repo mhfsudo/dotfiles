@@ -4,31 +4,34 @@
 
 # Load other files
 source "$CONFIG_DIR/colors.sh"
+source "$CONFIG_DIR/icons.sh"
 
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 ITEM_DIR="$CONFIG_DIR/items"
 
+# aerospace setting
+AEROSPACE_FOCUSED_MONITOR_NO=$(aerospace list-workspaces --focused)
+AEROSPACE_LIST_OF_WINDOWS_IN_FOCUSED_MONITOR=$(aerospace list-windows --workspace $AEROSPACE_FOCUSED_MONITOR_NO | awk -F'|' '{gsub(/^ *| *$/, "", $2); print $2}')
+
 ##### Bar Appearance #####
-# Configuring the general appearance of the bar.
 # These are only some of the options available. For all options see:
 # https://felixkratz.github.io/SketchyBar/config/bar
-# If you are looking for other colors, see the color picker:
-# https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
 sketchybar --bar  position=top \
                   height=32 \
                   blur_radius=20 \
-                  corner_radius=7 \
+                  corner_radius=0 \
                   shadow=on \
                   sticky=on \
-                  margin=7 \
-                  y_offset=2 \
+                  margin=0 \
+                  y_offset=0 \
                   color=NULL \
-                  border_color=$BLACK \
+                  border_color=NULL \
                   border_width=0
 
+sketchybar --bar "${bar[@]}"
+
 ##### Changing Defaults #####
-# We now change some default values, which are applied to all further items.
 # For a full list of all available item properties see:
 # https://felixkratz.github.io/SketchyBar/config/items
 
@@ -36,31 +39,35 @@ default=(
   padding_left=5
   padding_right=5
   icon.font="Hack Nerd Font:Bold:15.0"
-  #label.font="Hack Nerd Font:Bold:15.0"
   label.font="JetBrains Nerd Font:Bold:15.0"
   background.color=NULL
   background.corner_radius=7
   background.height=25
-  #background.border_color=$BLACK \
-  #background.border_width=2 \
   label.padding_left=4
   label.padding_right=10
   icon.padding_left=10
   icon.padding_right=4
 )
+
 sketchybar --default "${default[@]}"
 
 # --- Left Side Items ---
-#source $ITEM_DIR/apple.sh
-source $ITEM_DIR/spaces.sh
+source $ITEM_DIR/apple.sh
+# source $ITEM_DIR/spaces.sh
+# source $ITEM_DIR/aerospace.sh
 source $ITEM_DIR/front_app.sh
 
 # --- Right Side Items ---
 source $ITEM_DIR/calendar.sh
 source $ITEM_DIR/battery.sh
-source $ITEM_DIR/cpu.sh
+# source $ITEM_DIR/cpu.sh
 source $ITEM_DIR/volume.sh
+source $ITEM_DIR/weather.sh
 source $ITEM_DIR/media.sh
+
+sketchybar --hotload on
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update
+
+echo "sketchybar configuation loaded.."
