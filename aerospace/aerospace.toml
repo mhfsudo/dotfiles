@@ -6,13 +6,15 @@ after-login-command = []
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-  'exec-and-forget borders active_color=0xfff81ce5 inactive_color=0xff531ce5 width=5.0',
-  'exec-and-forget sketchybar'
+    'exec-and-forget borders active_color=0xfff81ce5 inactive_color=0xff531ce5 width=5.0',
+    'exec-and-forget sketchybar',
 ]
 
 # Notify Sketchybar about workspace change
-exec-on-workspace-change = ['/bin/bash', '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+exec-on-workspace-change = [
+    '/bin/bash',
+    '-c',
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
 ]
 
 # Start AeroSpace at login
@@ -55,11 +57,11 @@ on-focus-changed = "move-mouse window-lazy-center"
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
 inner.horizontal = 7
-inner.vertical =   7
-outer.left =       7
-outer.bottom =     7
-outer.top =        7
-outer.right =      7
+inner.vertical = 7
+outer.left = 7
+outer.bottom = 7
+outer.top = [{monitor."Built-in Retina Display" = 7}, {monitor.main = 35}, 7]
+outer.right = 7
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -110,7 +112,7 @@ ctrl-1 = 'workspace 1'
 ctrl-a = 'workspace A' # Authenticator
 ctrl-b = 'workspace B' #  Browser
 ctrl-e = 'workspace E' # Editor
-ctrl-g = 'workspace G'  # GitK
+ctrl-g = 'workspace G' # GitK
 ctrl-m = 'workspace M' # Music & Mail
 ctrl-n = 'workspace N' # Note
 ctrl-p = 'workspace P' # Password Manager
@@ -127,7 +129,7 @@ ctrl-shift-n = ['move-node-to-workspace N', 'workspace N']
 ctrl-shift-p = ['move-node-to-workspace P', 'workspace P']
 ctrl-shift-t = ['move-node-to-workspace T', 'workspace T']
 
-ctrl-r  = 'flatten-workspace-tree'
+ctrl-r = 'flatten-workspace-tree'
 
 ctrl-f = 'layout floating tiling'
 
@@ -205,4 +207,8 @@ run = 'layout floating'
 [[on-window-detected]]
 # Terminal
 if.app-id = 'org.alacritty'
+run = "move-node-to-workspace T"
+[[on-window-detected]]
+# Terminal
+if.app-id = 'net.kovidgoyal.kitty'
 run = "move-node-to-workspace T"
