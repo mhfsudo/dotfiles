@@ -20,11 +20,11 @@ return {
 		},
 		daily_notes = {
 			-- Optional, if you keep daily notes in a separate directory.
-			folder = "2. Areas/Personal Routine/Daily Notes",
+			folder = "/2. Areas/Personal Routine/Daily Notes",
 			-- Optional, if you want to change the date format for the ID of daily notes.
 			date_format = "%Y-%m-%d",
 			-- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-			template = "3. Resources/Templates/Template Daily Note.md",
+			template = "/3. Resources/Templates/Template Daily Notes.md",
 		},
 		-- Optional, for templates
 		templates = {
