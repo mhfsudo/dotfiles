@@ -80,15 +80,31 @@ bar:
 workspaces:
   - name: "1"
   - name: "2"
+    display_name: "2 Terminal"
   - name: "3"
+    display_name: "3 Code"
   - name: "4"
+    display_name: "4 Browser"
   - name: "5"
+    display_name: "5 Notes"
   - name: "6"
+    display_name: "6 Mail"
   - name: "7"
   - name: "8"
   - name: "9"
 
 window_rules:
+  - commands: ["move to workspace 2"]
+    match_process_name: "alacritty|terminal"
+  - commands: ["move to workspace 3"]
+    match_process_name: "Code"
+  - commands: ["move to workspace 4"]
+    match_process_name: "chrome|firefox|msedge"
+  - commands: ["move to workspace 5"]
+    match_process_name: "Obsidian"
+  - commands: ["move to workspace 6"]
+    match_process_name: "OUTLOOK|ms-teams"
+
   # Task Manager requires admin privileges to manage and should be ignored unless running
   # the WM as admin.
   - command: "ignore"
