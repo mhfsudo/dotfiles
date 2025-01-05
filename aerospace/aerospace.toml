@@ -168,6 +168,9 @@ run = "move-node-to-workspace B"
 if.app-id = 'org.mozilla.firefox'
 run = "move-node-to-workspace B"
 [[on-window-detected]]
+if.app-id = 'org.mozilla.com.zen.browser'
+run = "move-node-to-workspace B"
+[[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 run = "move-node-to-workspace B"
 # Editor
