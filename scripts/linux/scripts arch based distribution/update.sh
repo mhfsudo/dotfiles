@@ -14,7 +14,16 @@ echo ""
 echo "Good, let's update your system"
 echo ""
 
-sudo pacman -Syu 
+echo "=== Systen ==="
+echo ""
+
+sudo pacman -Syu
+
+echo ""
+echo "=== Flatpak ==="
+echo ""
+
+flatpak update
 
 echo ""
 echo "Good, we're done"
