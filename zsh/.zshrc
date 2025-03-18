@@ -5,30 +5,18 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# CodeWhisperer pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshr
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
+# Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Path to your krew installation.
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-
 # Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
+# load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="bira"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -61,7 +49,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -90,23 +78,11 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  argocd
-  colorize
-  fzf
-  git
-  helm
-  kubectl
-  kubectx
-  macos
-  pre-commit
-  terraform
-)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-PATH=$PATH:/usr/sbin:/sbin
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -117,36 +93,30 @@ PATH=$PATH:/usr/sbin:/sbin
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch $(uname -m)"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# Set personal aliases, overriding those provided by Oh My Zsh libs,
+# plugins, and themes. Aliases can be placed here, though Oh My Zsh
+# users are encouraged to define aliases within a top-level file in
+# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
+# - $ZSH_CUSTOM/aliases.zsh
+# - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
-#
+
 # Aliases
-#
 # Alias configs
 alias bashconfig="nvim ~/.bashrc"
-alias gitconfig_personal="nvim ~/.gitconfig"
-alias gitconfig_work="nvim ~/.gitconfig_work"
-alias p10kconfig="nvim ~/.p10k.zsh"
-alias warptheme="nvim ~/.warp/themes/warp.yaml"
+alias gitconfig="nvim ~/.gitconfig"
 alias zshconfig="nvim ~/.zshrc"
 
 # Alias scripts
-alias update="zsh ~/Git/Personal/mac/script/update.sh"
-alias restart="zsh ~/Git/Personal/mac/script/reboot.sh"
-alias shutdown="zsh ~/Git/Personal/mac/script/poweroff.sh"
-
-# Alias directories
-alias family="cd ~/Documents/Family"
-alias personal="cd ~/Documents/Personal"
-alias work="cd ~/Documents/Work"
+alias update="zsh ~/Git/dotfiles/scripts/linux/scripts arch based distribution/update.sh"
+alias restart="zsh ~/Git/dotfiles/scripts/linux/scripts arch based distribution/reboot.sh"
+alias shutdown="zsh ~/Git/dotfiles/scripts/linux/scripts arch based distribution/poweroff.sh"
 
 # Alias Shortcuts
 alias nv="nvim"
@@ -162,10 +132,8 @@ alias gpull="git pull"
 alias gst="git status"
 alias glog="git log"
 
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# CodeWhisperer post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
