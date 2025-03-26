@@ -1,0 +1,16 @@
+{
+    "name": "ZSH DevContainer",
+    "image": "ubuntu:22.04",
+    "features": {},
+    "postCreateCommand": "sh /workspaces/dotfiles/.devcontainer/setup.sh",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "zsh"
+            }
+        }
+    },
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspaces/dotfiles,type=bind"
+    ]
+}
