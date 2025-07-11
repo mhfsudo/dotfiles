@@ -22,17 +22,10 @@ brew upgrade
 brew cleanup
 
 echo ""
-echo "=== Krew ==="
+echo "=== Code ==="
 echo ""
 
-kubectl krew update
-kubectl krew upgrade
-
-echo ""
-echo "=== Codium ==="
-echo ""
-
-codium --update-extensions
+code --update-extensions
 
 echo ""
 echo "=== App Store ==="
