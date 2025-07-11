@@ -109,11 +109,13 @@ ctrl-shift-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 ctrl-1 = 'workspace 1'
+ctrl-2 = 'workspace 2'
 ctrl-a = 'workspace A' # Authenticator
 ctrl-b = 'workspace B' # Browser
+ctrl-c = 'workspace C' # Communication
 ctrl-e = 'workspace E' # Editor
-ctrl-g = 'workspace G' # GitK
-ctrl-m = 'workspace M' # Music & Mail
+ctrl-g = 'workspace G' # Git
+ctrl-m = 'workspace M' # Music
 ctrl-n = 'workspace N' # Note
 ctrl-p = 'workspace P' # Password Manager
 ctrl-t = 'workspace T' # Terminal
@@ -123,6 +125,7 @@ ctrl-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
 ctrl-shift-2 = ['move-node-to-workspace 2', 'workspace 2']
 ctrl-shift-a = ['move-node-to-workspace A', 'workspace A']
 ctrl-shift-b = ['move-node-to-workspace B', 'workspace B']
+ctrl-shift-c = ['move-node-to-workspace C', 'workspace C']
 ctrl-shift-e = ['move-node-to-workspace E', 'workspace E']
 ctrl-shift-g = ['move-node-to-workspace G', 'workspace G']
 ctrl-shift-m = ['move-node-to-workspace M', 'workspace M']
@@ -177,6 +180,14 @@ run = "move-node-to-workspace B"
 if.app-id = 'com.google.Chrome'
 run = "move-node-to-workspace B"
 # =======================================================
+# Communication
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'
+run = "move-node-to-workspace C"
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+run = "move-node-to-workspace C"
+# =======================================================
 # Editor
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
@@ -230,6 +241,9 @@ run = "move-node-to-workspace M"
 # Note
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
+run = "move-node-to-workspace N"
+[[on-window-detected]]
+if.app-id = 'com.microsoft.onenote.mac'
 run = "move-node-to-workspace N"
 # =======================================================
 # Password Manager
