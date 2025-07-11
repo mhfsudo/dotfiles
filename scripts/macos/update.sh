@@ -19,6 +19,7 @@ echo ""
 
 brew update
 brew upgrade
+brew cleanup
 
 echo ""
 echo "=== Krew ==="
