@@ -14,13 +14,12 @@ echo ""
 echo "Good, let's make a reboot"
 echo ""
 
-networksetup -setsecurewebproxystate "Wi-fi" off
-
 echo "=== Brew ==="
 echo ""
 
 brew update
 brew upgrade
+brew autoclean
 
 echo ""
 echo "=== Krew ==="
