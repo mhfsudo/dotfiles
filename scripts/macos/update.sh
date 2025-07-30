@@ -22,6 +22,13 @@ brew upgrade
 brew cleanup
 
 echo ""
+echo "=== sdkman ==="
+echo ""
+
+sdk update
+skd upgrade
+
+echo ""
 echo "=== Code ==="
 echo ""
 
