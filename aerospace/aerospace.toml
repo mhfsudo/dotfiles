@@ -110,12 +110,12 @@ ctrl-shift-equal = 'resize smart +50'
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 ctrl-1 = 'workspace 1'
 ctrl-2 = 'workspace 2'
-ctrl-a = 'workspace A' # Authenticator
+ctrl-a = 'workspace A' # AI & Authenticator
 ctrl-b = 'workspace B' # Browser
 ctrl-c = 'workspace C' # Communication
 ctrl-e = 'workspace E' # Editor
 ctrl-g = 'workspace G' # Git
-ctrl-m = 'workspace M' # Music
+ctrl-m = 'workspace M' # Music & Messages
 ctrl-n = 'workspace N' # Note
 ctrl-p = 'workspace P' # Password Manager
 ctrl-t = 'workspace T' # Terminal
@@ -161,9 +161,9 @@ ctrl-shift-l = ['join-with right', 'mode main']
 
 # for id: aerospace list-apps
 # =======================================================
-# Authenticator
+# AI
 [[on-window-detected]]
-if.app-id = 'com.yubico.yubioath'
+if.app-id = 'com.openai.chat'
 run = "move-node-to-workspace A"
 # =======================================================
 # Browser
@@ -179,14 +179,6 @@ run = "move-node-to-workspace B"
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 run = "move-node-to-workspace B"
-# =======================================================
-# Communication
-[[on-window-detected]]
-if.app-id = 'com.microsoft.Outlook'
-run = "move-node-to-workspace C"
-[[on-window-detected]]
-if.app-id = 'com.microsoft.teams2'
-run = "move-node-to-workspace C"
 # =======================================================
 # Editor
 [[on-window-detected]]
@@ -222,14 +214,19 @@ run = "move-node-to-workspace G"
 if.app-id = 'com.github.GitHubClient'
 run = "move-node-to-workspace G"
 # =======================================================
-# Mail
+# Music & Messages
 [[on-window-detected]]
 if.app-id = 'ch.protonmail.desktop'
 run = "move-node-to-workspace M"
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
 run = "move-node-to-workspace M"
-# =======================================================
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'
+run = "move-node-to-workspace M"
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+run = "move-node-to-workspace M"
 # Music
 [[on-window-detected]]
 if.app-id = 'com.deezer.deezer-desktop'
@@ -246,12 +243,16 @@ run = "move-node-to-workspace N"
 if.app-id = 'com.microsoft.onenote.mac'
 run = "move-node-to-workspace N"
 # =======================================================
-# Password Manager
+# Password Manager & Authenticator
 [[on-window-detected]]
 if.app-id = 'me.proton.pass.electron'
 run = "move-node-to-workspace P"
 [[on-window-detected]]
 if.app-id = 'org.keepassxc.keepassxc'
+run = "move-node-to-workspace P"
+# Authenticator
+[[on-window-detected]]
+if.app-id = 'com.yubico.yubioath'
 run = "move-node-to-workspace P"
 # =======================================================
 # System Setting
