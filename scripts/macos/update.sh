@@ -27,6 +27,7 @@ echo ""
 
 sdk update
 sdk upgrade
+sdk selfupdate
 
 echo ""
 echo "=== Code ==="
