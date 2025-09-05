@@ -26,7 +26,7 @@ echo "=== sdkman ==="
 echo ""
 
 sdk update
-skd upgrade
+sdk upgrade
 
 echo ""
 echo "=== Code ==="
