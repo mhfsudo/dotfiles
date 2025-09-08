@@ -34,6 +34,12 @@ sdk upgrade
 sdk selfupdate
 
 echo ""
+echo "=== Cursor ==="
+echo ""
+
+code --update-extensions
+
+echo ""
 echo "=== Code ==="
 echo ""
 
