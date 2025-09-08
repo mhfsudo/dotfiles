@@ -1,5 +1,9 @@
 #!/bin/zsh
 
+# Initialize SDKMAN
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
 echo "=============================================================================="
 echo "                                      "
 echo "       __    ___  ___   ___  _______	"
