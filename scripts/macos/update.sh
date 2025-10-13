@@ -37,7 +37,7 @@ echo ""
 echo "=== Cursor ==="
 echo ""
 
-code --update-extensions
+cursor --update-extensions
 
 echo ""
 echo "=== Code ==="
