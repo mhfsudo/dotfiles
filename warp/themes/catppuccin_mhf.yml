@@ -1,0 +1,26 @@
+accent: '#531CE5'
+background: '#000000'
+details: darker
+foreground: '#531CE5'
+terminal_colors:
+# Normal colors
+    normal:
+        black:   '#1C1C1E' # surface1
+        red:     '#FF3B30' # red
+        green:   '#34C759' # green
+        yellow:  '#FFCC00' # yellow
+        blue:    '#8007AFF' # blue
+        magenta: '#FF2DDE' # pink
+        cyan:    '#32ADE6' # teal
+        white:   '#F2F2F7' # subtext1
+
+    # Bright colors
+    bright:
+        black:   '#1C1C1E' # surface2
+        red:     '#FF453A' # red
+        green:   '#30D158' # green
+        yellow:  '#FFD60A' # yellow
+        blue:    '#0A84FF' # blue
+        magenta: '#FF37F2' # pink
+        cyan:    '#64D2FF' # teal
+        white:   '#F2F2F7' # subtext0
