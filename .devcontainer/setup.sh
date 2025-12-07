@@ -1,7 +1,10 @@
 #!/bin/bash
 
+sudo dnf update
+echo "updated"
+
 # Install ZSH
-apt-get update && apt-get install -y zsh
+# apt-get update && apt-get install -y zsh
 
 # Install dotfiles
 # if [ -d "$HOME/.dotfiles" ]; then
@@ -12,4 +15,4 @@ apt-get update && apt-get install -y zsh
 # fi
 
 # Set ZSH as default shell
-chsh -s $(which zsh)
+# chsh -s $(which zsh)
