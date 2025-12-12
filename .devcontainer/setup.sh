@@ -1,10 +1,11 @@
 #!/bin/bash
 
-sudo dnf update
-echo "updated"
+echo "running setup script"
+
+apt-get update
 
 # Install ZSH
-# apt-get update && apt-get install -y zsh
+apt-get install -y zsh
 
 # Install dotfiles
 # if [ -d "$HOME/.dotfiles" ]; then
