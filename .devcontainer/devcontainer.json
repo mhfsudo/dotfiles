@@ -3,7 +3,7 @@
 {
 	"name": "Standard DevContainer",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/universal",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -14,27 +14,29 @@
 		"vscode": {			
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"yzhang.markdown-all-in-one",
-				"streetsidesoftware.code-spell-checker",
-				"DavidAnson.vscode-markdownlint",
-				"shd101wyy.markdown-preview-enhanced",
-				"bierner.github-markdown-preview"
+				"anthropic.claude-code",
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"firefox-devtools.vscode-firefox-debug",
+				"github.copilot",
+				"ms-azuretools.vscode-containers",
+				"ms-azuretools.vscode-docker",
+				"ms-kubernetes-tools.vscode-kubernetes-tools",
+				"openai.chatgpt",
+				"redhat.vscode-yaml",
+				"yzhang.markdown-all-in-one"
 			]
 		}
 	},
 	"features": {
-		"ghcr.io/devcontainers/features/github-cli:1": {
-			"installDirectlyFromGitHubRelease": true,
-			"version": "latest"
-		},
-		"ghcr.io/msclock/features/gitlab-ci-local:0": {
-			"version": "latest"
-		},
 		"ghcr.io/eliises/devcontainer-features/devcontainers-cli:1": {
 			"version": "latest",
 			"nodeVersion": "latest"
 		},
-		"ghcr.io/schlich/devcontainer-features/powerlevel10k:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {
+			"installDirectlyFromGitHubRelease": true,
+			"version": "latest"
+		},
 		"ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {
 			"defaultUser": true,
 			"setLocale": true,
@@ -42,14 +44,12 @@
 			"plugins": "git docker",
 			"desiredLocale": "de_CH.UTF-8 UTF-8"
 		},
-		"ghcr.io/devcontainers-extra/features/gh-cli:1": {
-			"version": "latest"
-		},
 		"ghcr.io/devcontainers-extra/features/zsh-plugins:0": {
 			"plugins": "ssh-agent npm",
 			"omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
 			"username": "vscode"
-		}
+		},
+		"ghcr.io/schlich/devcontainer-features/powerlevel10k:1": {}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
