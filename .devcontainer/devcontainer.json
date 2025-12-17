@@ -3,31 +3,16 @@
 {
 	"name": "Standard DevContainer",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-		"ghcr.io/eliises/devcontainer-features/devcontainers-cli:1": {
-			"version": "latest",
-			"nodeVersion": "latest"
-		},
-		"ghcr.io/devcontainers/features/github-cli:1": {
-			"installDirectlyFromGitHubRelease": true,
-			"version": "latest"
-		},
 		"ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {
-			"defaultUser": true,
-			"setLocale": true,
-			"theme": "bira",
-			"plugins": "git docker",
-			"desiredLocale": "de_CH.UTF-8 UTF-8"
+			"theme": "bira"
 		},
-		"ghcr.io/devcontainers-extra/features/zsh-plugins:0": {
-			"plugins": "ssh-agent npm",
-			"omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
-			"username": "vscode"
-		},
-		"ghcr.io/schlich/devcontainer-features/powerlevel10k:1": {}
+		"ghcr.io/duduribeiro/devcontainer-features/neovim:1": {}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -53,7 +38,19 @@
 				"openai.chatgpt",
 				"redhat.vscode-yaml",
 				"yzhang.markdown-all-in-one"
-			]
+			],
+			"settings": {
+  				"editor.lineNumbers": "relative",
+				"files.autoSave": "afterDelay",
+				"git.autofetch": true,
+				"window.commandCenter": false,
+  				"window.menuBarVisibility": "compact",
+  				"window.newWindowProfile": "Default",
+				"workbench.colorTheme": "Catppuccin Mocha",
+  				"workbench.iconTheme": "catppuccin-mocha",
+  				"workbench.layoutControl.enabled": false,
+  				"workbench.navigationControl.enabled": false
+			}
 		}
 	},
 
