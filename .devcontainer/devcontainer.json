@@ -1,0 +1,59 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/markdown
+{
+	"name": "Standard DevContainer",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {
+			"theme": "bira"
+		},
+		"ghcr.io/duduribeiro/devcontainer-features/neovim:1": {}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "bash /workspaces/dotfiles/.devcontainer/setup.sh",
+	
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {			
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"anthropic.claude-code",
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"firefox-devtools.vscode-firefox-debug",
+				"github.copilot",
+				"ms-azuretools.vscode-containers",
+				"ms-azuretools.vscode-docker",
+				"ms-kubernetes-tools.vscode-kubernetes-tools",
+				"openai.chatgpt",
+				"redhat.vscode-yaml",
+				"yzhang.markdown-all-in-one"
+			],
+			"settings": {
+  				"editor.lineNumbers": "relative",
+				"files.autoSave": "afterDelay",
+				"git.autofetch": true,
+				"window.commandCenter": false,
+  				"window.menuBarVisibility": "compact",
+  				"window.newWindowProfile": "Default",
+				"workbench.colorTheme": "Catppuccin Mocha",
+  				"workbench.iconTheme": "catppuccin-mocha",
+  				"workbench.layoutControl.enabled": false,
+  				"workbench.navigationControl.enabled": false
+			}
+		}
+	},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "root"
+}
