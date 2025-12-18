@@ -18,7 +18,7 @@ echo "=== Systen ==="
 echo ""
 
 sudo dnf update -y
-sudo dnf upgrade --refresh
+sudo dnf upgrade -y --refresh
 sudo dnf clean all
 sudo dnf autoremove
 
