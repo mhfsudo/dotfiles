@@ -11,4 +11,4 @@ The Project Access Token in GitLab needs the following paramter:
 - Role: Maintainer
 - Scope: write_repository
 
-More details can be found here: (https://github.com/marketplace/actions/sync-to-gitlab)
+More details can be found here: https://github.com/marketplace/actions/sync-to-gitlab
