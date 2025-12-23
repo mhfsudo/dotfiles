@@ -16,8 +16,8 @@
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
 
 stages:          # List of stages for jobs, and their order of execution
+  - test 
   - build
-  - test
   - deploy
 
 # You can override the included template(s) by including variable overrides
@@ -28,34 +28,38 @@ stages:          # List of stages for jobs, and their order of execution
 # Note that environment variables can be set in several places
 # See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
 
-sast:
+test sast:
   stage: test
-include:
-- template: Security/SAST.gitlab-ci.yml
+  include:
+    - echo "Running sast tests"
+    - template: Security/SAST.gitlab-ci.yml
 
-build-job:       # This job runs in the build stage, which runs first.
-  stage: build
+test unit:
+  stage: test
   script:
-    - echo "Compiling the code..."
-    - echo "Compile complete."
+    - echo "Running unit tests"
 
-unit-test-job:   # This job runs in the test stage.
-  stage: test    # It only starts when the job in the build stage completes successfully.
-  script:
-    - echo "Running unit tests... This will take about 60 seconds."
-    - sleep 60
-    - echo "Code coverage is 90%"
-
-lint-test-job:   # This job also runs in the test stage.
-  stage: test    # It can run at the same time as unit-test-job (in parallel).
+test lint:
+  stage: test
   script:
     - echo "Linting code... This will take about 10 seconds."
     - sleep 10
     - echo "No lint issues found."
 
-deploy-job:      # This job runs in the deploy stage.
-  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
-  environment: production
+build-job:
+  stage: build
+  need: test
+  script:
+    - echo "Compiling the code..."
+    - echo "Compile complete."
+
+deploy-job:
+  stage: deploy
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "main"'
+      when: always
+    - when: never
   script:
     - echo "Deploying application..."
     - echo "Application successfully deployed."
+  environment: production
