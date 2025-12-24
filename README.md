@@ -6,16 +6,9 @@ This Repo contains some of my configurations.
 
 ## Installation
 
-- Alacritty: https://alacritty.org/
-- Git: https://git-scm.com/
-- iTerm2: https://iterm2.com/
-- Keychron: https://usevia.app/
-- Sketchybar: https://felixkratz.github.io/SketchyBar/
-- Warp: https://www.warp.dev/
-- Zed: https://zed.dev/
-- ZSH: https://zsh.sourceforge.io/
-- ZSH Theme Powerlevel 10K: https://github.com/romkatv/powerlevel10k
-- OhMyZSH: https://ohmyz.sh/
+- Cloen the repo
+- Make a backup of your settings
+- Copy one of my settings
 
 ## Contributing
 
