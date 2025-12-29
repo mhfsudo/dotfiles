@@ -48,7 +48,13 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
+window-decoration = none
+window-padding-x = 15
+window-padding-y = 15
 theme = catppuccin-mocha.conf
-font-size = 14
 background-opacity = 0.95
+background-blur = true
+cursor-style = "block"
+font-size = 14
+font-family = "JetBrainsMono Nerd Font"
 gtk-titlebar = false
