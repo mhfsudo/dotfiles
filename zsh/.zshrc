@@ -31,7 +31,8 @@ alias vimconfig="nvim ~/.vimrc"
 alias zshconfig="nvim ~/.zshrc"
 
 # Alias scripts
-alias update="zsh ~/dotfiles/scripts/linux/scripts_fedora_based_distribution/update.sh"
+alias updatelinux="zsh ~/dotfiles/scripts/linux/scripts_fedora_based_distribution/update.sh"
+alias updatemac="zsh ~/dotfiles/scripts/macos/update.sh"
 
 # Alias Shortcuts
 alias g="git"
