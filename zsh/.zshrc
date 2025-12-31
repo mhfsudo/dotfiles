@@ -20,9 +20,12 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 # Alias configs
+alias aerospaceconfig="nvim ~/.aerospace.toml"
+alias alacrittyconfig="nvim ~/.config/alacritty/alacritty.toml"
 alias bashconfig="nvim ~/.bashrc"
 alias ghosttyconfig="nvim ~/.config/ghostty/config"
 alias gitconfig="nvim ~/.gitconfig"
+alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
 alias p10kconfig="nvim ~/.p10k.zsh"
 alias vimconfig="nvim ~/.vimrc"
 alias zshconfig="nvim ~/.zshrc"
