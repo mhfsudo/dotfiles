@@ -4,7 +4,6 @@
 
 [core]
 	editor = nvim
-	autocrlf = true
 
 [color]
 	branch = auto
@@ -12,9 +11,6 @@
 	interactive = auto
 	status = auto
 	ui = auto
-
-[includeIf "gitdir:~/Git/Work/*"]
-	path = ~/.gitconfig_work
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -27,3 +23,9 @@
 
 [pull]
 	rebase = true
+
+[alias]
+	a = add
+	c = commit
+	st = status
+	dog = log --all --decorate --oneline --graph  
