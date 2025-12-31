@@ -28,9 +28,7 @@ alias vimconfig="nvim ~/.vimrc"
 alias zshconfig="nvim ~/.zshrc"
 
 # Alias scripts
-alias update="zsh ~/Git/dotfiles/scripts/linux/scripts_fedora_based_distribution/update.sh"
-alias restart="zsh ~/Git/dotfiles/scripts/linux/scripts_fedora_based_distribution/reboot.sh"
-alias shutdown="zsh ~/Git/dotfiles/scripts/linux/scripts_fedora_based_distribution/poweroff.sh"
+alias update="zsh ~/dotfiles/scripts/linux/scripts_fedora_based_distribution/update.sh"
 
 # Alias Shortcuts
 alias g="git"
