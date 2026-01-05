@@ -1,8 +1,8 @@
 #!/bin/zsh
 
 # Initialize SDKMAN
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# export SDKMAN_DIR="$HOME/.sdkman"
+# [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 echo "=============================================================================="
 echo "                                      "
@@ -25,25 +25,18 @@ brew update
 brew upgrade
 brew cleanup
 
-echo "=== sdkman ==="
-echo ""
+# echo "=== sdkman ==="
+# echo ""
 
-sdk update
-sdk upgrade
+# sdk update
+# sdk upgrade
+# sdk selfupdate
 
-echo ""
-echo "=== sdkman ==="
-echo ""
+# echo ""
+# echo "=== Cursor ==="
+# echo ""
 
-sdk update
-sdk upgrade
-sdk selfupdate
-
-echo ""
-echo "=== Cursor ==="
-echo ""
-
-cursor --update-extensions
+# cursor --update-extensions
 
 echo ""
 echo "=== Code ==="
