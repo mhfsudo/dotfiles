@@ -36,6 +36,7 @@ alias updatemac="zsh ~/dotfiles/scripts/macos/update.sh"
 
 # Alias Shortcuts
 alias g="git"
+alias kc="kubectl"
 alias l="ls -lah"
 alias nv="nvim"
 alias yazi="flatpak run io.github.sxyazi.yazi"
