@@ -40,3 +40,6 @@ alias kc="kubectl"
 alias l="ls -lah"
 alias nv="nvim"
 alias yazi="flatpak run io.github.sxyazi.yazi"
+
+# Autostart Zellij
+'eval "$(zellij setup --generate-auto-start zsh)"
