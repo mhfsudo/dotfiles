@@ -1,0 +1,7 @@
+layout {
+  pane borderless=true
+  pane split_direction="horiontal" {
+    pane command="fastfetch"
+    pane command="htop"
+  }
+}
