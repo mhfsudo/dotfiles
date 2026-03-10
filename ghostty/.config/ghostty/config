@@ -51,7 +51,7 @@
 window-decoration = none
 window-padding-x = 15
 window-padding-y = 15
-theme = catppuccin-mocha.conf
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 background-opacity = 0.95
 background-blur = true
 cursor-style = "block"
