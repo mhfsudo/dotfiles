@@ -1,13 +1,6 @@
-# Powerlevel10k
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
 zstyle ':omz:update' mode auto
 plugins=(
   colored-man-pages
@@ -41,8 +34,10 @@ alias l="ls -lah"
 alias nv="nvim"
 alias yazi="flatpak run io.github.sxyazi.yazi"
 
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.zellij:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(starship init zsh)"
