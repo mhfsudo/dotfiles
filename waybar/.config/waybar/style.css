@@ -1,0 +1,199 @@
+/* Catppuccin Mocha */
+@define-color base    #1e1e2e;
+@define-color mantle  #181825;
+@define-color crust   #11111b;
+@define-color surface0 #313244;
+@define-color surface1 #45475a;
+@define-color surface2 #585b70;
+@define-color overlay0 #6c7086;
+@define-color overlay1 #7f849c;
+@define-color text    #cdd6f4;
+@define-color subtext0 #a6adc8;
+@define-color subtext1 #bac2de;
+@define-color mauve   #cba6f7;
+@define-color blue    #89b4fa;
+@define-color sapphire #74c7ec;
+@define-color sky     #89dceb;
+@define-color teal    #94e2d5;
+@define-color green   #a6e3a1;
+@define-color yellow  #f9e2af;
+@define-color peach   #fab387;
+@define-color red     #f38ba8;
+@define-color pink    #f5c2e7;
+@define-color lavender #b4befe;
+
+* {
+    font-family: 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: @base;
+    border-bottom: 2px solid @surface0;
+    color: @text;
+}
+
+/* Left modules */
+#workspaces {
+    margin: 0 4px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background-color: @surface0;
+    color: @subtext0;
+    border-radius: 4px;
+    margin: 4px 2px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    background-color: @surface0;
+    color: @text;
+}
+
+#workspaces button.focused {
+    background-color: @mauve;
+    color: @base;
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+    color: @base;
+}
+
+#mode {
+    background-color: @peach;
+    color: @base;
+    padding: 0 10px;
+    margin: 4px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+#scratchpad {
+    background-color: @surface0;
+    color: @text;
+    padding: 0 10px;
+    margin: 4px 2px;
+    border-radius: 4px;
+}
+
+/* Center */
+#clock {
+    color: @text;
+    padding: 0 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 0 12px;
+    margin: 4px 2px;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+}
+
+/* Right modules — shared */
+#idle_inhibitor,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#temperature,
+#tray {
+    padding: 0 12px;
+    margin: 4px 2px;
+    border-radius: 4px;
+    color: @text;
+    background-color: @surface0;
+    transition: background-color 0.2s ease;
+}
+
+/* Idle inhibitor */
+#idle_inhibitor {
+    color: @subtext0;
+}
+
+#idle_inhibitor.activated {
+    color: @green;
+    background-color: @surface1;
+}
+
+/* Pulseaudio */
+#pulseaudio {
+    color: @mauve;
+}
+
+#pulseaudio:hover {
+    background-color: @surface1;
+}
+
+#pulseaudio.muted {
+    color: @overlay0;
+}
+
+#pulseaudio.bluetooth {
+    color: @blue;
+}
+
+/* Network */
+#network {
+    color: @lavender;
+}
+
+#network:hover {
+    background-color: @surface1;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+#network.linked {
+    color: @yellow;
+}
+
+/* cpu */
+#cpu {
+  color: @sapphire;
+}
+
+/* memory */
+#memory {
+  color: @teal;
+}
+
+/* temperature */
+#temperature {
+  color: @peach;
+}
+
+/* Tray */
+#tray {
+    background-color: @surface0;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @red;
+    border-radius: 4px;
+}
+
+/* Tooltips */
+tooltip {
+    background-color: @mantle;
+    border: 1px solid @surface1;
+    border-radius: 6px;
+    color: @text;
+}
+
+tooltip label {
+    color: @text;
+}
