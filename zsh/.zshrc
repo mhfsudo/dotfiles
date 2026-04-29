@@ -41,3 +41,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(starship init zsh)"
+
+# Auto-attach to last tmux session or create new one
+if [ -z "$TMUX" ]; then
+  tmux attach-session 2>/dev/null || tmux new-session
+fi
