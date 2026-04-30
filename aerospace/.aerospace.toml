@@ -176,7 +176,7 @@ run = "move-node-to-workspace 2"
 if.app-id = 'com.jetbrains.fleet'
 run = "move-node-to-workspace 2"
 [[on-window-detected]]
-if.app-id = 'com.jetbrains.intellij.ce'
+if.app-id = 'com.jetbrains.intellij'
 run = "move-node-to-workspace 2"
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.aqua'
@@ -232,9 +232,9 @@ run = "move-node-to-workspace 5"
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
 run = "move-node-to-workspace 5"
-[[on-window-detected]]
-if.app-id = 'com.microsoft.Outlook'
-run = "move-node-to-workspace 5"
+#[[on-window-detected]]
+#if.app-id = 'com.microsoft.Outlook'
+#run = "move-node-to-workspace 5"
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2'
 run = "move-node-to-workspace 5"
