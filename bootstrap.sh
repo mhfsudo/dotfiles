@@ -43,14 +43,32 @@ sudo chsh -s "$ZSH_PATH" "$(whoami)"
 echo "    Default shell set to $ZSH_PATH"
 
 # ---------------------------------------------------------------------------
-# 2. Install starship
+# 2. Install oh-my-zsh
+# ---------------------------------------------------------------------------
+
+echo "==> Installing oh-my-zsh..."
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
+else
+    echo "    oh-my-zsh already installed, skipping."
+fi
+
+# ---------------------------------------------------------------------------
+# 3. Install tmux
+# ---------------------------------------------------------------------------
+
+echo "==> Installing tmux..."
+install_packages tmux
+
+# ---------------------------------------------------------------------------
+# 4. Install starship
 # ---------------------------------------------------------------------------
 
 echo "==> Installing starship..."
 curl -sS https://starship.rs/install.sh | sudo sh -s -- --yes
 
 # ---------------------------------------------------------------------------
-# 3. Install stow (needed to link configs)
+# 5. Install stow (needed to link configs)
 # ---------------------------------------------------------------------------
 
 if ! command -v stow > /dev/null 2>&1; then
@@ -59,7 +77,7 @@ if ! command -v stow > /dev/null 2>&1; then
 fi
 
 # ---------------------------------------------------------------------------
-# 4. Clone dotfiles repo (if not already present)
+# 6. Clone dotfiles repo (if not already present)
 # ---------------------------------------------------------------------------
 
 if [ ! -d "$DOTFILES_DIR" ]; then
@@ -70,10 +88,10 @@ else
 fi
 
 # ---------------------------------------------------------------------------
-# 5. Stow configs
+# 7. Stow configs
 # ---------------------------------------------------------------------------
 
 echo "==> Stowing configs..."
-stow --dir="$DOTFILES_DIR" --target="$HOME" --restow zsh starship
+stow --dir="$DOTFILES_DIR" --target="$HOME" --restow zsh starship tmux
 
 echo "==> Done."
