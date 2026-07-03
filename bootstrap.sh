@@ -75,11 +75,6 @@ echo ""
 
 install_packages tmux
 
-echo "=== Installing starship ==="
-echo ""
-
-curl -sS https://starship.rs/install.sh | sh -y
-
 echo "=== Installing vim ==="
 echo ""
 
@@ -91,6 +86,11 @@ echo ""
 mv ~/.config/nvim{,.bak}
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
+
+echo "=== Installing starship ==="
+echo ""
+
+curl -sS https://starship.rs/install.sh | sh
 
 echo ""
 echo "Good, we're done"
