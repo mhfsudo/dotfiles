@@ -78,6 +78,7 @@ curl -sS https://starship.rs/install.sh | sudo sh -s -- --yes
 # ---------------------------------------------------------------------------
 
 echo "==> Installing JetBrainsMono Nerd Font..."
+install_packages fontconfig xz-utils
 FONT_DIR="$HOME/.local/share/fonts/JetBrainsMonoNerdFont"
 mkdir -p "$FONT_DIR"
 FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz"
