@@ -73,4 +73,16 @@ install_packages tmux
 echo "==> Installing starship..."
 curl -sS https://starship.rs/install.sh | sudo sh -s -- --yes
 
+# ---------------------------------------------------------------------------
+# 5. Install JetBrainsMono Nerd Font
+# ---------------------------------------------------------------------------
+
+echo "==> Installing JetBrainsMono Nerd Font..."
+FONT_DIR="$HOME/.local/share/fonts/JetBrainsMonoNerdFont"
+mkdir -p "$FONT_DIR"
+FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz"
+curl -fsSL "$FONT_URL" | tar -xJ -C "$FONT_DIR"
+fc-cache -f "$FONT_DIR"
+echo "    JetBrainsMono Nerd Font installed."
+
 echo "==> Done."
