@@ -75,16 +75,6 @@ echo ""
 
 install_packages tmux
 
-echo "=== Installing JetBrainsMono Nerd Font ==="
-echo ""
-
-install_packages fontconfig xz-utils
-FONT_DIR="$HOME/.local/share/fonts/JetBrainsMonoNerdFont"
-mkdir -p "$FONT_DIR"
-FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz"
-curl -fsSL "$FONT_URL" | tar -xJ -C "$FONT_DIR"
-fc-cache -f "$FONT_DIR"
-
 echo "=== Installing starship ==="
 echo ""
 
