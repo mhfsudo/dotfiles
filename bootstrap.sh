@@ -78,7 +78,7 @@ install_packages tmux
 echo "=== Installing starship ==="
 echo ""
 
-curl -sS https://starship.rs/install.sh | sudo sh -s -- --yes
+curl -sS https://starship.rs/install.sh | sh -y
 
 echo "=== Installing vim ==="
 echo ""
