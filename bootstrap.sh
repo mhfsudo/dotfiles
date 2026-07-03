@@ -1,39 +1,51 @@
 #!/bin/sh
 
+echo "=============================================================================="
+echo "                                      "
+echo "       __    ___  ___   ___  _______	"
+echo "      /  \__/  / /  /  /  / /  ____/  "
+echo "     /        / /  /__/  / /  /__     "
+echo "    /  /\_/  / /  ___   / /  ___/     "
+echo "   /  /  /  / /  /  /  / /  /		    "
+echo "  /__/  /__/ /__/  /__/ /__/ 		    "
+echo "                                      "
+echo "======================================"
+echo ""
+echo "Good, let's update your system"
+echo ""
+
 set -e
 
-# ---------------------------------------------------------------------------
-# Package installation helpers
-# ---------------------------------------------------------------------------
+echo "=== System Update ==="
+echo ""
+
+sudo apt-get update -q
+sudo apt-get upgrade -y -q
+sudo apt-get autoremove -y -q
+sudo apt-get autoclean -y -q   
 
 install_packages() {
     if command -v apt-get > /dev/null 2>&1; then
         sudo apt-get update -q
         sudo apt-get install -y -q "$@"
-    elif command -v dnf > /dev/null 2>&1; then
-        sudo dnf install -y "$@"
-    elif command -v yum > /dev/null 2>&1; then
-        sudo yum install -y "$@"
-    elif command -v apk > /dev/null 2>&1; then
-        sudo apk add --no-cache "$@"
     else
-        echo "ERROR: No supported package manager found (apt, dnf, yum, apk)" >&2
+        echo "ERROR: No supported package manager found" >&2
         exit 1
     fi
 }
 
-# ---------------------------------------------------------------------------
-# Prepare configurations
-# ---------------------------------------------------------------------------
+echo "=== Prepare confiugrations ==="
+echo ""
 
 curdir="$(dirname "$0")"
 cp "$curdir/zsh/.zshrc" ~/.zshrc
+cp "$curdir/git/.gitconfig" ~/.gitconfig
 cp "$curdir/starship/.config/starship.toml" ~/.config/starship.toml
-echo "==> Configuration files copied to home directory."
+cp "$curdir/tmux/.tmux.conf" ~/.tmux.conf
+cp "$curdir/vim/.vimrc" ~/.vimrc
 
-# ---------------------------------------------------------------------------
-# 1. Install zsh
-# ---------------------------------------------------------------------------
+echo "=== Installing zsh ==="
+echo ""
 
 echo "==> Installing zsh..."
 install_packages zsh
@@ -48,9 +60,8 @@ fi
 sudo chsh -s "$ZSH_PATH" "$(whoami)"
 echo "    Default shell set to $ZSH_PATH"
 
-# ---------------------------------------------------------------------------
-# 2. Install oh-my-zsh
-# ---------------------------------------------------------------------------
+echo "=== Installing oh-my-zsh ==="
+echo ""
 
 echo "==> Installing oh-my-zsh..."
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -59,31 +70,39 @@ else
     echo "    oh-my-zsh already installed, skipping."
 fi
 
-# ---------------------------------------------------------------------------
-# 3. Install tmux
-# ---------------------------------------------------------------------------
+echo "=== Installing tmux ==="
+echo ""
 
-echo "==> Installing tmux..."
 install_packages tmux
 
-# ---------------------------------------------------------------------------
-# 4. Install starship
-# ---------------------------------------------------------------------------
+echo "=== Installing JetBrainsMono Nerd Font ==="
+echo ""
 
-echo "==> Installing starship..."
-curl -sS https://starship.rs/install.sh | sudo sh -s -- --yes
-
-# ---------------------------------------------------------------------------
-# 5. Install JetBrainsMono Nerd Font
-# ---------------------------------------------------------------------------
-
-echo "==> Installing JetBrainsMono Nerd Font..."
 install_packages fontconfig xz-utils
 FONT_DIR="$HOME/.local/share/fonts/JetBrainsMonoNerdFont"
 mkdir -p "$FONT_DIR"
 FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz"
 curl -fsSL "$FONT_URL" | tar -xJ -C "$FONT_DIR"
 fc-cache -f "$FONT_DIR"
-echo "    JetBrainsMono Nerd Font installed."
 
-echo "==> Done."
+echo "=== Installing starship ==="
+echo ""
+
+curl -sS https://starship.rs/install.sh | sudo sh -s -- --yes
+
+echo "=== Installing vim ==="
+echo ""
+
+install_packages vim
+
+echo "=== Installing LazyVim ==="
+echo ""
+
+mv ~/.config/nvim{,.bak}
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+
+echo ""
+echo "Good, we're done"
+echo ""
+echo "=============================================================================="
