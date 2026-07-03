@@ -2,9 +2,6 @@
 
 set -e
 
-DOTFILES_DIR="${DOTFILES_DIR:-$HOME/dotfiles}"
-DOTFILES_REPO="${DOTFILES_REPO:-https://github.com/mhfsudo/dotfiles.git}"
-
 # ---------------------------------------------------------------------------
 # Package installation helpers
 # ---------------------------------------------------------------------------
@@ -66,32 +63,5 @@ install_packages tmux
 
 echo "==> Installing starship..."
 curl -sS https://starship.rs/install.sh | sudo sh -s -- --yes
-
-# ---------------------------------------------------------------------------
-# 5. Install stow (needed to link configs)
-# ---------------------------------------------------------------------------
-
-if ! command -v stow > /dev/null 2>&1; then
-    echo "==> Installing stow..."
-    install_packages stow
-fi
-
-# ---------------------------------------------------------------------------
-# 6. Clone dotfiles repo (if not already present)
-# ---------------------------------------------------------------------------
-
-if [ ! -d "$DOTFILES_DIR" ]; then
-    echo "==> Cloning dotfiles into $DOTFILES_DIR..."
-    git clone "$DOTFILES_REPO" "$DOTFILES_DIR"
-else
-    echo "==> Dotfiles directory already exists at $DOTFILES_DIR, skipping clone."
-fi
-
-# ---------------------------------------------------------------------------
-# 7. Stow configs
-# ---------------------------------------------------------------------------
-
-echo "==> Stowing configs..."
-stow --dir="$DOTFILES_DIR" --target="$HOME" --restow zsh starship tmux
 
 echo "==> Done."
