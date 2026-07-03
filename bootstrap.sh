@@ -23,6 +23,15 @@ install_packages() {
 }
 
 # ---------------------------------------------------------------------------
+# Prepare configurations
+# ---------------------------------------------------------------------------
+
+curdir="$(dirname "$0")"
+cp "$curdir/zsh/.zshrc" ~/.zshrc
+cp "$curdir/starship/.config/starship.toml" ~/.config/starship.toml
+echo "==> Configuration files copied to home directory."
+
+# ---------------------------------------------------------------------------
 # 1. Install zsh
 # ---------------------------------------------------------------------------
 
