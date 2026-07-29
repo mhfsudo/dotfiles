@@ -30,3 +30,6 @@
 	c = commit
 	st = status
 	dog = log --all --decorate --oneline --graph  
+
+[credential]
+	helper = libsecret
