@@ -3,10 +3,15 @@ export ZSH="$HOME/.oh-my-zsh"
 
 zstyle ':omz:update' mode auto
 plugins=(
+  brew
   colored-man-pages
   colorize
   docker 
   git
+  git-auto-fetch
+  kubectl
+  kubectx
+  mvn
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -32,7 +37,6 @@ alias g="git"
 alias kc="kubectl"
 alias l="ls -lah"
 alias nv="nvim"
-alias yazi="flatpak run io.github.sxyazi.yazi"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -43,6 +47,6 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 eval "$(starship init zsh)"
 
 # Auto-attach to last tmux session or create new one
-if [ -z "$TMUX" ]; then
-  tmux attach-session 2>/dev/null || tmux new-session
-fi
+# if [ -z "$TMUX" ]; then
+#  tmux attach-session 2>/dev/null || tmux new-session
+# fi
