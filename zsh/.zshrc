@@ -33,6 +33,7 @@ alias updatelinux="zsh ~/dotfiles/scripts/linux/scripts_fedora_based_distributio
 alias updatemac="zsh ~/dotfiles/scripts/macos/update.sh"
 
 # Alias Shortcuts
+alias cat="bat"
 alias g="git"
 alias kc="kubectl"
 alias l="ls -lah"
