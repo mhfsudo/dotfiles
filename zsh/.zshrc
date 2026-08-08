@@ -48,6 +48,7 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 eval "$(starship init zsh)"
 
 export PATH="/home/mhf/.local/bin:$PATH"
+export PATH=$PATH:$HOME/go/bin
 
 # Auto-attach to last tmux session or create new one
 # if [ -z "$TMUX" ]; then
