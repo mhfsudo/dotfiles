@@ -162,34 +162,34 @@ run = "move-node-to-workspace 1"
 if.app-id = 'com.google.Chrome'
 run = "move-node-to-workspace 1"
 # =======================================================
-# 2 Coding
+# 2-3 Coding
 [[on-window-detected]]
 if.app-id = 'com.todesktop.230313mzl4w4u92'
-run = "move-node-to-workspace 2"
+run = "move-node-to-workspace 3"
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
-run = "move-node-to-workspace 2"
+run = "move-node-to-workspace 3"
 [[on-window-detected]]
 if.app-id = 'com.vscodium'
-run = "move-node-to-workspace 2"
+run = "move-node-to-workspace 3"
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.fleet'
-run = "move-node-to-workspace 2"
+run = "move-node-to-workspace 3"
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.intellij'
-run = "move-node-to-workspace 2"
+run = "move-node-to-workspace 3"
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.aqua'
-run = "move-node-to-workspace 2"
+run = "move-node-to-workspace 3"
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.pycharm.ce'
-run = "move-node-to-workspace 2"
+run = "move-node-to-workspace 3"
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.WebStorm'
-run = "move-node-to-workspace 2"
+run = "move-node-to-workspace 3"
 [[on-window-detected]]
 if.app-id = 'dev.zed.Zed'
-run = "move-node-to-workspace 2"
+run = "move-node-to-workspace 3"
 [[on-window-detected]]
 if.app-id = 'com.axosoft.gitkraken'
 run = "move-node-to-workspace 2"
@@ -209,13 +209,13 @@ run = "move-node-to-workspace 2"
 if.app-id = 'dev.warp.Warp-Stable'
 run = "move-node-to-workspace 2"
 # =======================================================
-# 3 Note
+# 4 Note
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
-run = "move-node-to-workspace 3"
+run = "move-node-to-workspace 4"
 [[on-window-detected]]
 if.app-id = 'com.microsoft.onenote.mac'
-run = "move-node-to-workspace 3"
+run = "move-node-to-workspace 4"
 # =======================================================
 # 4 Music
 [[on-window-detected]]
@@ -225,16 +225,16 @@ run = "move-node-to-workspace 4"
 if.app-id = 'com.deezer.deezer-desktop'
 run = "move-node-to-workspace 4"
 # =======================================================
-# 5 Communication
+# 5-6 Communication
 [[on-window-detected]]
 if.app-id = 'ch.protonmail.desktop'
-run = "move-node-to-workspace 5"
+run = "move-node-to-workspace 6"
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
-run = "move-node-to-workspace 5"
+run = "move-node-to-workspace 6"
 #[[on-window-detected]]
 #if.app-id = 'com.microsoft.Outlook'
-#run = "move-node-to-workspace 5"
+#run = "move-node-to-workspace 6"
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2'
 run = "move-node-to-workspace 5"
