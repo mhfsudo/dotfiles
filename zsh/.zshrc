@@ -47,6 +47,7 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 eval "$(starship init zsh)"
 
+export SSH_AUTH_SOCK=/home/mhf/.ssh/proton-pass-ssh-agent.sock
 export PATH="/home/mhf/.local/bin:$PATH"
 export PATH=$PATH:$HOME/go/bin
 
