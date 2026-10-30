@@ -39,7 +39,7 @@ echo ""
 
 curdir="$(dirname "$0")"
 cp "$curdir/zsh/.zshrc" ~/.zshrc
-cp "$curdir/git/.gitconfig" ~/.gitconfig
+# cp "$curdir/git/.gitconfig" ~/.gitconfig
 cp "$curdir/starship/.config/starship.toml" ~/.config/starship.toml
 cp "$curdir/tmux/.tmux.conf" ~/.tmux.conf
 cp "$curdir/vim/.vimrc" ~/.vimrc
