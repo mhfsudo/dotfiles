@@ -106,6 +106,7 @@ ctrl-3 = 'workspace 3' # Note
 ctrl-4 = 'workspace 4' # Music
 ctrl-5 = 'workspace 5' # Communication
 ctrl-6 = 'workspace 6'
+ctrl-7 = 'workspace 7'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 ctrl-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
@@ -114,6 +115,7 @@ ctrl-shift-3 = ['move-node-to-workspace 3', 'workspace 3']
 ctrl-shift-4 = ['move-node-to-workspace 4', 'workspace 4']
 ctrl-shift-5 = ['move-node-to-workspace 5', 'workspace 5']
 ctrl-shift-6 = ['move-node-to-workspace 6', 'workspace 6']
+ctrl-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
 
 ctrl-r = 'flatten-workspace-tree'
 
@@ -175,9 +177,9 @@ run = "move-node-to-workspace 3"
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.fleet'
 run = "move-node-to-workspace 3"
-[[on-window-detected]]
-if.app-id = 'com.jetbrains.intellij'
-run = "move-node-to-workspace 3"
+#[[on-window-detected]]
+#if.app-id = 'com.jetbrains.intellij'
+#run = "move-node-to-workspace 3"
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.aqua'
 run = "move-node-to-workspace 3"
